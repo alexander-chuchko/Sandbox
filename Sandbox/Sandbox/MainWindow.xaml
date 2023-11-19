@@ -4,9 +4,151 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sandbox"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
 
+        <Style TargetType="TextBlock"  x:Key="menuName">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+            <!--<Setter Property="Foreground" Value="#596EFB"/>-->
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="Margin" Value="5,0"/>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#ff4064"/>
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+
+        <Style TargetType="StackPanel" x:Key="menuStackPanel">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <!--                    <Setter Property="Background" Value="#f8f5f5"/> -->
+                    <Setter Property="Background" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="Image" x:Key="menuImage">
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Width" Value="25"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+
+        <Style x:Key="listBoxItemStyle" TargetType="ListBoxItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border Name="_Border"
+                                Padding="2"
+                                SnapsToDevicePixels="true">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver"  Value="true">
+                                <Setter TargetName="_Border" Property="Background" Value="#f8f5f5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+    </Window.Resources>
+    
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding NavigateMainPageToCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="280"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="#fcfcfc"
+              Grid.Column="0"
+              Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+            <Image Grid.Column="0"
+                   Grid.Row="0"
+                   Margin="5">
+                <Image.Source>
+                    <BitmapImage UriSource="/Images/dashboard_light.png"/>
+                </Image.Source>
+            </Image>
+
+            <TextBlock Text="DashBoard"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       Foreground="#596EFB"
+                       FontWeight="Bold"
+                       FontFamily="Montserrat"
+                       FontSize="18"
+                       VerticalAlignment="Center" 
+                       Margin="10,20">
+            </TextBlock>
+
+            <Separator Background="#E5E5E5" 
+                       Height="1"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Stretch"
+                       Grid.ColumnSpan="2"/>
+
+            <Grid Grid.Column="0"
+                  Grid.Row="3"
+                  Grid.ColumnSpan="2">
+
+                <ListBox ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                         Width="auto"
+                         Height="auto"
+                         ItemsSource="{Binding MenuList}"
+                         BorderThickness="0"
+                         Background="Transparent"
+                         ItemContainerStyle="{DynamicResource listBoxItemStyle}"
+                         SelectedItem="{Binding SelectedParagraph}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal"
+                                        Background="{Binding TextBackground}"
+                                        Style="{StaticResource menuStackPanel}">
+
+                                <Image Source="{Binding ImageSource}"
+                                       Style="{StaticResource menuImage}"/>
+
+                                <TextBlock Text="{Binding Name}"
+                                           Foreground="{Binding TextForeground}"
+                                           Style="{StaticResource menuName}">
+
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
