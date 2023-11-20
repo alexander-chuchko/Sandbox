@@ -8,8 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\dashboard_light.png" />
+    <None Remove="Images\home_light.png" />
+    <None Remove="Images\info_light.png" />
+    <None Remove="Images\settings_light.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\dashboard_light.png" />
+    <Resource Include="Images\home_light.png" />
+    <Resource Include="Images\info_light.png" />
+    <Resource Include="Images\settings_light.png" />
   </ItemGroup>
 
 </Project>

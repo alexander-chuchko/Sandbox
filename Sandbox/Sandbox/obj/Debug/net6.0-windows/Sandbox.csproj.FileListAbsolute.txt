@@ -12,10 +12,12 @@ E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sa
 E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\bin\Debug\net6.0-windows\Unity.Container.dll
 E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\Sandbox.csproj.AssemblyReference.cache
 E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\MainWindow.g.cs
+E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\Views\MainPage.g.cs
 E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\App.g.cs
 E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\Sandbox_MarkupCompile.cache
 E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\Sandbox_MarkupCompile.lref
 E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\MainWindow.baml
+E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\Views\MainPage.baml
 E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\Sandbox.g.resources
 E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\Sandbox.GeneratedMSBuildEditorConfig.editorconfig
 E:\Library\Стажировка\Test Assignment (Harkiv)\2023\Sandbox\Sandbox\Sandbox\obj\Debug\net6.0-windows\Sandbox.AssemblyInfoInputs.cache

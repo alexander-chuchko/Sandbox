@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sandbox"
+        xmlns:prism="http://prismlibrary.com/"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -60,7 +61,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
     </Window.Resources>
     
     <i:Interaction.Triggers>
@@ -149,6 +150,9 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </Grid>
+            <ContentControl Grid.Column="1"
+                        prism:RegionManager.RegionName="ContentRegion"
+                        Margin="5" />
         </Grid>
     </Grid>
 </Window>

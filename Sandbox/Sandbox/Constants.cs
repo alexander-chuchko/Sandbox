@@ -22,6 +22,7 @@ namespace Sandbox
         public const string MAIN_ITEM = "Main";
         public const string DETAILS_ITEM = "Details";
         public const string SETTINGS_ITEM = "Settings";
+        public const string LANGUAGE_ITEM = "Language";
 
     }
 }
